@@ -1,42 +1,42 @@
 ---
-title: "YOUR NAME" 
+title: "Sophia Stang" 
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
-  image: img/profile.png
+  image: img/IMG_5476.jpeg
   image-width: 16em
   image-shape: rounded # rectangle  round  rounded
   
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/sophia-stang-829915286/
     - icon: instagram
       text: Instagram
-      href: https://instagram.com
+      href: https://www.instagram.com/sjstang30/
     - icon: github
       text: GitHub
-      href: https://github.com
+      href: https://ssdanl.github.io/
     - icon: file-earmark-pdf
       text: Resumé
-      href: resume-example.pdf
+      href: Sophia Stang Resume 2024.pdf
       target: _blank
     - icon: mailbox
       text: Email
-      href: mailto:YOUR_EMAIL@geneseo.edu
+      href: mailto:sjs102@geneseo.edu
 
 ---
 
 
-Finley Malloc majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Finley enjoys spending time unicycling and playing with her pet iguana.
+Sophia Stang majors in Biology and minors in Data Analytics and the Honors Program at SUNY Geneseo. When not working on research and data analytics, Sophia enjoys spending time practicing the arts and reading.
 
 ## Education
 
 State University of New York at Geneseo | Geneseo, NY <br>
-B.S. in Data Analytics | Aug 2022 - May 2026 <br>
-Minor in Economics
+B.S. in Biology | Aug 2022 - May 2026 <br>
+Minor in Data Analytics and College Honors Program
 
 ## Experience
 
-Starbucks Analytics | Data Analyst Intern | May 2024 - Aug 2024
+SUNY Geneseo CIT HelpDesk Manager | Native Bee Ecology Directed Study | May 2024 - Aug 2024
 
 
