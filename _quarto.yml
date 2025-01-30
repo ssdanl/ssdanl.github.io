@@ -13,8 +13,8 @@ website:
       - text: Project
         href: danl_proj_nba.ipynb
       - text: Python Data Analysis
-        href: blog-listing.qmd
-        href: danl_proj_nba.ipynb
+        href: pandas_basics.ipynb
+        href: seaborn_basics.ipynb
 
   page-footer: 
     center: "Powered with GitHub, Quarto, and Jupyter Notebook<br>© YOUR NAME, 2025"
