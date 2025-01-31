@@ -13,9 +13,12 @@ website:
       - text: Project
         href: danl_proj_nba.ipynb
       - text: Python Data Analysis
-        href: pandas_basics.ipynb
-        href: seaborn_basics.ipynb
-
+        menu:
+          - text: Pandas Basics
+            href: pandas_basic.ipynb
+          - text: Seaborn Basics                  
+            href: seaborn_basic.ipynb
+            
   page-footer: 
     center: "Powered with GitHub, Quarto, and Jupyter Notebook<br>© YOUR NAME, 2025"
 
