@@ -1,66 +1,17 @@
 [
   {
-    "objectID": "blog-listing.html",
-    "href": "blog-listing.html",
-    "title": "Insightful Analytics",
+    "objectID": "myblog/about.html",
+    "href": "myblog/about.html",
+    "title": "About",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\nMar 2, 2025\n\n\nHarlow Malloc\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\nFeb 27, 2025\n\n\nTristan O’Malley\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nStarwars\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYour Name\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+    "text": "About this blog"
   },
   {
-    "objectID": "posts/starwars/starwars_df.html",
-    "href": "posts/starwars/starwars_df.html",
-    "title": "Starwars",
-    "section": "",
-    "text": "Let’s analyze the starwars data:\nstarwars &lt;- read_csv(\"https://bcdanl.github.io/data/starwars.csv\")"
-  },
-  {
-    "objectID": "posts/starwars/starwars_df.html#variable-description-for-starwars-data.frame",
-    "href": "posts/starwars/starwars_df.html#variable-description-for-starwars-data.frame",
-    "title": "Starwars",
-    "section": "Variable Description for starwars data.frame",
-    "text": "Variable Description for starwars data.frame\nThe following describes the variables in the starwars data.frame.\n\nfilms List of films the character appeared in\nname Name of the character\nspecies Name of species\nheight Height (cm)\nmass Weight (kg)\nhair_color, skin_color, eye_color Hair, skin, and eye colors\nbirth_year Year born (BBY = Before Battle of Yavin)\nsex The biological sex of the character, namely male, female, hermaphroditic, or none (as in the case for Droids).\ngender The gender role or gender identity of the character as determined by their personality or the way they were programmed (as in the case for Droids).\nhomeworld Name of homeworld"
-  },
-  {
-    "objectID": "posts/starwars/starwars_df.html#human-vs.-droid",
-    "href": "posts/starwars/starwars_df.html#human-vs.-droid",
-    "title": "Starwars",
-    "section": "Human vs. Droid",
-    "text": "Human vs. Droid\n\nggplot(data = \n         starwars %&gt;% \n         filter(species %in% c(\"Human\", \"Droid\"))) +\n  geom_boxplot(aes(x = species, y = mass, \n                   fill = species),\n               show.legend = FALSE)"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code with no space in the folder name.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
+    "objectID": "myblog/posts/welcome/index.html",
+    "href": "myblog/posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sophia Stang",
-    "section": "",
-    "text": "Sophia Stang majors in Biology and minors in Data Analytics and the Honors Program at SUNY Geneseo. When not working on research and data analytics, Sophia enjoys spending time practicing the arts and reading."
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Sophia Stang",
-    "section": "Education",
-    "text": "Education\nState University of New York at Geneseo | Geneseo, NY  B.S. in Biology | Aug 2022 - May 2026  Minor in Data Analytics and College Honors Program"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Sophia Stang",
-    "section": "Experience",
-    "text": "Experience\nSUNY Geneseo CIT HelpDesk Manager | Native Bee Ecology Directed Study | May 2024 - Aug 2024"
   },
   {
     "objectID": "danl_proj_nba.html#salary-distribution-among-teams",
@@ -140,11 +91,74 @@
     "text": "import seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\n# Sample data\ndata = {\n    'Category': ['A', 'B', 'C', 'D'],\n    'Values': [23, 45, 56, 78]\n}\ndf = pd.DataFrame(data)\n\n# Create a barplot\nsns.set(style=\"whitegrid\")  # Optional: Set a clean grid style\nplt.figure(figsize=(8, 6))  # Set the figure size\nsns.barplot(data=df, x='Category', y='Values', palette='viridis')\n\n# Customize the plot\nplt.title(\"Bar Plot Example\", fontsize=16)\nplt.xlabel(\"Category\", fontsize=12)\nplt.ylabel(\"Values\", fontsize=12)\n\n# Show the plot\nplt.show()\n\nFutureWarning: \n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n\n  sns.barplot(data=df, x='Category', y='Values', palette='viridis')"
   },
   {
-    "objectID": "myblog/index.html",
-    "href": "myblog/index.html",
-    "title": "myblog",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 2, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 27, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code with no space in the folder name.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/spotify/Spotify_Blog.html",
+    "href": "posts/spotify/Spotify_Blog.html",
+    "title": "Spotify",
+    "section": "",
+    "text": "Part 4. Jupyter Notebook Blogging\nWrite a blog post about your favorite artist(s) in the spotify DataFrame using Jupyter Notebook, and add it to your online blog. In your blog post, utilize counting, sorting, indexing, and filtering methods.\n\nimport pandas as pd\n\n\nspotify = pd.read_csv('https://bcdanl.github.io/data/spotify_all.csv')\nspotify\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\nartist_name\ntrack_name\nduration_ms\nalbum_name\n\n\n\n\n0\n0\nThrowbacks\n0\nMissy Elliott\nLose Control (feat. Ciara & Fat Man Scoop)\n226863\nThe Cookbook\n\n\n1\n0\nThrowbacks\n1\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n2\n0\nThrowbacks\n2\nBeyoncé\nCrazy In Love\n235933\nDangerously In Love (Alben für die Ewigkeit)\n\n\n3\n0\nThrowbacks\n3\nJustin Timberlake\nRock Your Body\n267266\nJustified\n\n\n4\n0\nThrowbacks\n4\nShaggy\nIt Wasn't Me\n227600\nHot Shot\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n198000\n999998\n✝️\n6\nChris Tomlin\nWaterfall\n209573\nLove Ran Red\n\n\n198001\n999998\n✝️\n7\nChris Tomlin\nThe Roar\n220106\nLove Ran Red\n\n\n198002\n999998\n✝️\n8\nCrowder\nLift Your Head Weary Sinner (Chains)\n224666\nNeon Steeple\n\n\n198003\n999998\n✝️\n9\nChris Tomlin\nWe Fall Down\n280960\nHow Great Is Our God: The Essential Collection\n\n\n198004\n999998\n✝️\n10\nCaleb and Kelsey\n10,000 Reasons / What a Beautiful Name\n178189\n10,000 Reasons / What a Beautiful Name\n\n\n\n\n198005 rows × 7 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\nI really enjoy the spotify playlist “Throwbacks”.\n\nthrowbacks = spotify['playlist_name'] == \"Throwbacks\"\nthrowbacks_df = spotify[throwbacks]\nthrowbacks_df\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\nartist_name\ntrack_name\nduration_ms\nalbum_name\n\n\n\n\n0\n0\nThrowbacks\n0\nMissy Elliott\nLose Control (feat. Ciara & Fat Man Scoop)\n226863\nThe Cookbook\n\n\n1\n0\nThrowbacks\n1\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n2\n0\nThrowbacks\n2\nBeyoncé\nCrazy In Love\n235933\nDangerously In Love (Alben für die Ewigkeit)\n\n\n3\n0\nThrowbacks\n3\nJustin Timberlake\nRock Your Body\n267266\nJustified\n\n\n4\n0\nThrowbacks\n4\nShaggy\nIt Wasn't Me\n227600\nHot Shot\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n186699\n999823\nThrowbacks\n5\nNelly Furtado\nPromiscuous\n242293\nLoose\n\n\n186700\n999823\nThrowbacks\n6\nUsher\nDJ Got Us Fallin' In Love\n220800\nRaymond v Raymond (Deluxe Edition)\n\n\n186701\n999823\nThrowbacks\n7\nIyaz\nReplay\n182306\nReplay\n\n\n186702\n999823\nThrowbacks\n8\nJay Sean\nDown\n212506\nAll Or Nothing\n\n\n186703\n999823\nThrowbacks\n9\nFar East Movement\nLike A G6\n216893\nFree Wired\n\n\n\n\n627 rows × 7 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nthrowbacks_df['artist_name'].nunique()\n\n223\n\n\nThere is a total of 223 different artists in this playlist, including one of my favorite artists, Britney Spears.\n\nby_artist = throwbacks_df.set_index(keys = \"artist_name\")\nby_artist\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\ntrack_name\nduration_ms\nalbum_name\n\n\nartist_name\n\n\n\n\n\n\n\n\n\n\nMissy Elliott\n0\nThrowbacks\n0\nLose Control (feat. Ciara & Fat Man Scoop)\n226863\nThe Cookbook\n\n\nBritney Spears\n0\nThrowbacks\n1\nToxic\n198800\nIn The Zone\n\n\nBeyoncé\n0\nThrowbacks\n2\nCrazy In Love\n235933\nDangerously In Love (Alben für die Ewigkeit)\n\n\nJustin Timberlake\n0\nThrowbacks\n3\nRock Your Body\n267266\nJustified\n\n\nShaggy\n0\nThrowbacks\n4\nIt Wasn't Me\n227600\nHot Shot\n\n\n...\n...\n...\n...\n...\n...\n...\n\n\nNelly Furtado\n999823\nThrowbacks\n5\nPromiscuous\n242293\nLoose\n\n\nUsher\n999823\nThrowbacks\n6\nDJ Got Us Fallin' In Love\n220800\nRaymond v Raymond (Deluxe Edition)\n\n\nIyaz\n999823\nThrowbacks\n7\nReplay\n182306\nReplay\n\n\nJay Sean\n999823\nThrowbacks\n8\nDown\n212506\nAll Or Nothing\n\n\nFar East Movement\n999823\nThrowbacks\n9\nLike A G6\n216893\nFree Wired\n\n\n\n\n627 rows × 6 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nbritney = throwbacks_df['artist_name'] == \"Britney Spears\"\nbritney_df = throwbacks_df[britney]\nbritney_df\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\nartist_name\ntrack_name\nduration_ms\nalbum_name\n\n\n\n\n1\n0\nThrowbacks\n1\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n24216\n380\nThrowbacks\n1\nBritney Spears\nCircus\n192360\nCircus (Deluxe Version)\n\n\n24245\n380\nThrowbacks\n30\nBritney Spears\n3\n213173\nThe Singles Collection\n\n\n24340\n380\nThrowbacks\n125\nBritney Spears\nWomanizer\n224400\nCircus (Deluxe Version)\n\n\n48261\n717\nThrowbacks\n51\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n48262\n717\nThrowbacks\n52\nBritney Spears\n...Baby One More Time\n211066\n...Baby One More Time (Digital Deluxe Version)\n\n\n60323\n895\nThrowbacks\n121\nBritney Spears\nStronger\n203000\nOops!... I Did It Again\n\n\n60324\n895\nThrowbacks\n122\nBritney Spears\nLucky\n206226\nOops!... I Did It Again\n\n\n83553\n1247\nThrowbacks\n3\nBritney Spears\nOops!...I Did It Again\n211160\nOops!... I Did It Again\n\n\n83554\n1247\nThrowbacks\n4\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n83555\n1247\nThrowbacks\n5\nBritney Spears\nI'm a Slave 4 U\n203600\nBritney (Digital Deluxe Version)\n\n\n83556\n1247\nThrowbacks\n6\nBritney Spears\nPiece of Me\n212106\nBlackout\n\n\n83615\n1247\nThrowbacks\n65\nBritney Spears\nLucky\n206226\nOops!... I Did It Again\n\n\n83644\n1247\nThrowbacks\n94\nBritney Spears\nI'm Not a Girl, Not Yet a Woman\n231066\nBritney (Digital Deluxe Version)\n\n\n83645\n1247\nThrowbacks\n95\nBritney Spears\nGimme More\n251240\nBlackout\n\n\n135830\n999022\nThrowbacks\n64\nBritney Spears\nCircus\n192360\nCircus (Deluxe Version)\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nbritney_df['track_name'].count()\n\n16\n\n\nShe has 16 different songs in the playlist:\n\nbritney_df['track_name']\n\n\n\n\n\n\n\n\ntrack_name\n\n\n\n\n1\nToxic\n\n\n24216\nCircus\n\n\n24245\n3\n\n\n24340\nWomanizer\n\n\n48261\nToxic\n\n\n48262\n...Baby One More Time\n\n\n60323\nStronger\n\n\n60324\nLucky\n\n\n83553\nOops!...I Did It Again\n\n\n83554\nToxic\n\n\n83555\nI'm a Slave 4 U\n\n\n83556\nPiece of Me\n\n\n83615\nLucky\n\n\n83644\nI'm Not a Girl, Not Yet a Woman\n\n\n83645\nGimme More\n\n\n135830\nCircus\n\n\n\n\ndtype: object\n\n\n\nsong_length = britney_df['duration_ms'].sort_values(ascending=False)\nsong_length\nsong_length_min = song_length/60000\nsong_length_min\n\n\n\n\n\n\n\n\nduration_ms\n\n\n\n\n83645\n4.187333\n\n\n83644\n3.851100\n\n\n24340\n3.740000\n\n\n24245\n3.552883\n\n\n83556\n3.535100\n\n\n83553\n3.519333\n\n\n48262\n3.517767\n\n\n60324\n3.437100\n\n\n83615\n3.437100\n\n\n83555\n3.393333\n\n\n60323\n3.383333\n\n\n1\n3.313333\n\n\n48261\n3.313333\n\n\n83554\n3.313333\n\n\n24216\n3.206000\n\n\n135830\n3.206000\n\n\n\n\ndtype: float64\n\n\nHer longest song is 4.187 minutes, while her shortest song is 3.206 minutes.\n\nsong_length_min.sum()\n\n55.90638333333333\n\n\nShe makes up a total of 55.906 minutes of the playlist “Throwbacks”."
+  },
+  {
+    "objectID": "posts/starwars/starwars_df.html",
+    "href": "posts/starwars/starwars_df.html",
+    "title": "Starwars",
+    "section": "",
+    "text": "Let’s analyze the starwars data:\nstarwars &lt;- read_csv(\"https://bcdanl.github.io/data/starwars.csv\")"
+  },
+  {
+    "objectID": "posts/starwars/starwars_df.html#variable-description-for-starwars-data.frame",
+    "href": "posts/starwars/starwars_df.html#variable-description-for-starwars-data.frame",
+    "title": "Starwars",
+    "section": "Variable Description for starwars data.frame",
+    "text": "Variable Description for starwars data.frame\nThe following describes the variables in the starwars data.frame.\n\nfilms List of films the character appeared in\nname Name of the character\nspecies Name of species\nheight Height (cm)\nmass Weight (kg)\nhair_color, skin_color, eye_color Hair, skin, and eye colors\nbirth_year Year born (BBY = Before Battle of Yavin)\nsex The biological sex of the character, namely male, female, hermaphroditic, or none (as in the case for Droids).\ngender The gender role or gender identity of the character as determined by their personality or the way they were programmed (as in the case for Droids).\nhomeworld Name of homeworld"
+  },
+  {
+    "objectID": "posts/starwars/starwars_df.html#human-vs.-droid",
+    "href": "posts/starwars/starwars_df.html#human-vs.-droid",
+    "title": "Starwars",
+    "section": "Human vs. Droid",
+    "text": "Human vs. Droid\n\nggplot(data = \n         starwars %&gt;% \n         filter(species %in% c(\"Human\", \"Droid\"))) +\n  geom_boxplot(aes(x = species, y = mass, \n                   fill = species),\n               show.legend = FALSE)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sophia Stang",
+    "section": "",
+    "text": "Sophia Stang majors in Biology and minors in Data Analytics and the Honors Program at SUNY Geneseo. When not working on research and data analytics, Sophia enjoys spending time practicing the arts and reading."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Sophia Stang",
+    "section": "Education",
+    "text": "Education\nState University of New York at Geneseo | Geneseo, NY  B.S. in Biology | Aug 2022 - May 2026  Minor in Data Analytics and College Honors Program"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Sophia Stang",
+    "section": "Experience",
+    "text": "Experience\nSUNY Geneseo CIT HelpDesk Manager | Native Bee Ecology Directed Study | May 2024 - Aug 2024"
+  },
+  {
+    "objectID": "blog-listing.html",
+    "href": "blog-listing.html",
+    "title": "Insightful Analytics",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSpotify\n\n\n\n\n\n\n\n\nMar 3, 2025\n\n\nSophia Stang\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\nMar 2, 2025\n\n\nHarlow Malloc\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\nFeb 27, 2025\n\n\nTristan O’Malley\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nStarwars\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYour Name\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "myblog/posts/post-with-code/index.html",
@@ -154,24 +168,10 @@
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "posts/Spotify_Blog.html",
-    "href": "posts/Spotify_Blog.html",
-    "title": "Part 4. Jupyter Notebook Blogging",
+    "objectID": "myblog/index.html",
+    "href": "myblog/index.html",
+    "title": "myblog",
     "section": "",
-    "text": "Write a blog post about your favorite artist(s) in the spotify DataFrame using Jupyter Notebook, and add it to your online blog. In your blog post, utilize counting, sorting, indexing, and filtering methods.\n\nimport pandas as pd\n\n\nspotify = pd.read_csv('https://bcdanl.github.io/data/spotify_all.csv')\nspotify\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\nartist_name\ntrack_name\nduration_ms\nalbum_name\n\n\n\n\n0\n0\nThrowbacks\n0\nMissy Elliott\nLose Control (feat. Ciara & Fat Man Scoop)\n226863\nThe Cookbook\n\n\n1\n0\nThrowbacks\n1\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n2\n0\nThrowbacks\n2\nBeyoncé\nCrazy In Love\n235933\nDangerously In Love (Alben für die Ewigkeit)\n\n\n3\n0\nThrowbacks\n3\nJustin Timberlake\nRock Your Body\n267266\nJustified\n\n\n4\n0\nThrowbacks\n4\nShaggy\nIt Wasn't Me\n227600\nHot Shot\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n198000\n999998\n✝️\n6\nChris Tomlin\nWaterfall\n209573\nLove Ran Red\n\n\n198001\n999998\n✝️\n7\nChris Tomlin\nThe Roar\n220106\nLove Ran Red\n\n\n198002\n999998\n✝️\n8\nCrowder\nLift Your Head Weary Sinner (Chains)\n224666\nNeon Steeple\n\n\n198003\n999998\n✝️\n9\nChris Tomlin\nWe Fall Down\n280960\nHow Great Is Our God: The Essential Collection\n\n\n198004\n999998\n✝️\n10\nCaleb and Kelsey\n10,000 Reasons / What a Beautiful Name\n178189\n10,000 Reasons / What a Beautiful Name\n\n\n\n\n198005 rows × 7 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\nI really enjoy the spotify playlist “Throwbacks”.\n\nthrowbacks = spotify['playlist_name'] == \"Throwbacks\"\nthrowbacks_df = spotify[throwbacks]\nthrowbacks_df\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\nartist_name\ntrack_name\nduration_ms\nalbum_name\n\n\n\n\n0\n0\nThrowbacks\n0\nMissy Elliott\nLose Control (feat. Ciara & Fat Man Scoop)\n226863\nThe Cookbook\n\n\n1\n0\nThrowbacks\n1\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n2\n0\nThrowbacks\n2\nBeyoncé\nCrazy In Love\n235933\nDangerously In Love (Alben für die Ewigkeit)\n\n\n3\n0\nThrowbacks\n3\nJustin Timberlake\nRock Your Body\n267266\nJustified\n\n\n4\n0\nThrowbacks\n4\nShaggy\nIt Wasn't Me\n227600\nHot Shot\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n186699\n999823\nThrowbacks\n5\nNelly Furtado\nPromiscuous\n242293\nLoose\n\n\n186700\n999823\nThrowbacks\n6\nUsher\nDJ Got Us Fallin' In Love\n220800\nRaymond v Raymond (Deluxe Edition)\n\n\n186701\n999823\nThrowbacks\n7\nIyaz\nReplay\n182306\nReplay\n\n\n186702\n999823\nThrowbacks\n8\nJay Sean\nDown\n212506\nAll Or Nothing\n\n\n186703\n999823\nThrowbacks\n9\nFar East Movement\nLike A G6\n216893\nFree Wired\n\n\n\n\n627 rows × 7 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nthrowbacks_df['artist_name'].nunique()\n\n223\n\n\nThere is a total of 223 different artists in this playlist, including one of my favorite artists, Britney Spears.\n\nby_artist = throwbacks_df.set_index(keys = \"artist_name\")\nby_artist\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\ntrack_name\nduration_ms\nalbum_name\n\n\nartist_name\n\n\n\n\n\n\n\n\n\n\nMissy Elliott\n0\nThrowbacks\n0\nLose Control (feat. Ciara & Fat Man Scoop)\n226863\nThe Cookbook\n\n\nBritney Spears\n0\nThrowbacks\n1\nToxic\n198800\nIn The Zone\n\n\nBeyoncé\n0\nThrowbacks\n2\nCrazy In Love\n235933\nDangerously In Love (Alben für die Ewigkeit)\n\n\nJustin Timberlake\n0\nThrowbacks\n3\nRock Your Body\n267266\nJustified\n\n\nShaggy\n0\nThrowbacks\n4\nIt Wasn't Me\n227600\nHot Shot\n\n\n...\n...\n...\n...\n...\n...\n...\n\n\nNelly Furtado\n999823\nThrowbacks\n5\nPromiscuous\n242293\nLoose\n\n\nUsher\n999823\nThrowbacks\n6\nDJ Got Us Fallin' In Love\n220800\nRaymond v Raymond (Deluxe Edition)\n\n\nIyaz\n999823\nThrowbacks\n7\nReplay\n182306\nReplay\n\n\nJay Sean\n999823\nThrowbacks\n8\nDown\n212506\nAll Or Nothing\n\n\nFar East Movement\n999823\nThrowbacks\n9\nLike A G6\n216893\nFree Wired\n\n\n\n\n627 rows × 6 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nbritney = throwbacks_df['artist_name'] == \"Britney Spears\"\nbritney_df = throwbacks_df[britney]\nbritney_df\n\n\n  \n    \n\n\n\n\n\n\npid\nplaylist_name\npos\nartist_name\ntrack_name\nduration_ms\nalbum_name\n\n\n\n\n1\n0\nThrowbacks\n1\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n24216\n380\nThrowbacks\n1\nBritney Spears\nCircus\n192360\nCircus (Deluxe Version)\n\n\n24245\n380\nThrowbacks\n30\nBritney Spears\n3\n213173\nThe Singles Collection\n\n\n24340\n380\nThrowbacks\n125\nBritney Spears\nWomanizer\n224400\nCircus (Deluxe Version)\n\n\n48261\n717\nThrowbacks\n51\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n48262\n717\nThrowbacks\n52\nBritney Spears\n...Baby One More Time\n211066\n...Baby One More Time (Digital Deluxe Version)\n\n\n60323\n895\nThrowbacks\n121\nBritney Spears\nStronger\n203000\nOops!... I Did It Again\n\n\n60324\n895\nThrowbacks\n122\nBritney Spears\nLucky\n206226\nOops!... I Did It Again\n\n\n83553\n1247\nThrowbacks\n3\nBritney Spears\nOops!...I Did It Again\n211160\nOops!... I Did It Again\n\n\n83554\n1247\nThrowbacks\n4\nBritney Spears\nToxic\n198800\nIn The Zone\n\n\n83555\n1247\nThrowbacks\n5\nBritney Spears\nI'm a Slave 4 U\n203600\nBritney (Digital Deluxe Version)\n\n\n83556\n1247\nThrowbacks\n6\nBritney Spears\nPiece of Me\n212106\nBlackout\n\n\n83615\n1247\nThrowbacks\n65\nBritney Spears\nLucky\n206226\nOops!... I Did It Again\n\n\n83644\n1247\nThrowbacks\n94\nBritney Spears\nI'm Not a Girl, Not Yet a Woman\n231066\nBritney (Digital Deluxe Version)\n\n\n83645\n1247\nThrowbacks\n95\nBritney Spears\nGimme More\n251240\nBlackout\n\n\n135830\n999022\nThrowbacks\n64\nBritney Spears\nCircus\n192360\nCircus (Deluxe Version)\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nbritney_df['track_name'].count()\n\n16\n\n\nShe has 16 different songs in the playlist:\n\nbritney_df['track_name']\n\n\n\n\n\n\n\n\ntrack_name\n\n\n\n\n1\nToxic\n\n\n24216\nCircus\n\n\n24245\n3\n\n\n24340\nWomanizer\n\n\n48261\nToxic\n\n\n48262\n...Baby One More Time\n\n\n60323\nStronger\n\n\n60324\nLucky\n\n\n83553\nOops!...I Did It Again\n\n\n83554\nToxic\n\n\n83555\nI'm a Slave 4 U\n\n\n83556\nPiece of Me\n\n\n83615\nLucky\n\n\n83644\nI'm Not a Girl, Not Yet a Woman\n\n\n83645\nGimme More\n\n\n135830\nCircus\n\n\n\n\ndtype: object\n\n\n\nsong_length = britney_df['duration_ms'].sort_values(ascending=False)\nsong_length\nsong_length_min = song_length/60000\nsong_length_min\n\n\n\n\n\n\n\n\nduration_ms\n\n\n\n\n83645\n4.187333\n\n\n83644\n3.851100\n\n\n24340\n3.740000\n\n\n24245\n3.552883\n\n\n83556\n3.535100\n\n\n83553\n3.519333\n\n\n48262\n3.517767\n\n\n60324\n3.437100\n\n\n83615\n3.437100\n\n\n83555\n3.393333\n\n\n60323\n3.383333\n\n\n1\n3.313333\n\n\n48261\n3.313333\n\n\n83554\n3.313333\n\n\n24216\n3.206000\n\n\n135830\n3.206000\n\n\n\n\ndtype: float64\n\n\nHer longest song is 4.187 minutes, while her shortest song is 3.206 minutes.\n\nsong_length_min.sum()\n\n55.90638333333333\n\n\nShe makes up a total of 55.906 minutes of the playlist “Throwbacks”."
-  },
-  {
-    "objectID": "myblog/posts/welcome/index.html",
-    "href": "myblog/posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "myblog/about.html",
-    "href": "myblog/about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 2, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 27, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   }
 ]
