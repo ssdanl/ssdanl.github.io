@@ -2,7 +2,7 @@
 title: "Sophia Stang" 
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
-  image: img/IMG_5476.jpeg
+  image: img/IMG_5476.jpeg 
   image-width: 16em
   image-shape: rounded # rectangle  round  rounded
   
