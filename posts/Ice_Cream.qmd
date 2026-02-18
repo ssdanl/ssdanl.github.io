@@ -1,0 +1,121 @@
+---
+title: "Homework 1"
+subtitle: "`ggplot2` & `dplyr` Fundamentals · Quarto Blogging"
+author: Sophia Stang
+date: 2026-02-18
+format:
+  html:
+    toc: true
+---
+
+
+## Ice Cream Blog
+
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
+ice_cream <- read_csv("https://bcdanl.github.io/data/ben-and-jerry-cleaned.csv")
+```
+
+```{r}
+head(ice_cream)
+```
+
+## Flavor Price Descriptions
+
+```{r}
+ice_cream|>
+  arrange(
+    desc(priceper1)
+  )
+```
+
+```{r}
+ggplot(data = ice_cream,
+       mapping = aes(
+         y = flavor_descr
+       ))+
+  geom_bar()
+```
+
+The range of popularity for the flavors is very wide.
+
+```{r}
+pop_flavors<- ice_cream|>
+  count(flavor_descr, name = "n")|>
+  filter(
+    n>400
+  )|>
+  arrange(
+    desc(n)
+  )|>
+  head(10)
+```
+
+```{r}
+ggplot(data = pop_flavors,
+       mapping = aes(
+       x = n,
+       y = flavor_descr))+
+  geom_col()
+```
+
+The ten most popular flavors are listed above. Among them, Cherry Garcia is the most popular flavor.
+
+```{r}
+price_by_flav <- ice_cream|>
+  filter(
+    size1_descr == "16.0 MLOZ"
+  )|>
+  group_by(flavor_descr)|>
+  summarise( n = n(),
+             mean_price = mean(priceper1)
+  )
+```
+
+```{r}
+ggplot(data = price_by_flav,
+       mapping = aes(
+         x = n,
+         y = mean_price
+       ))+
+  geom_point()
+```
+
+
+There is no clear relationship between popular flavors and their average prices
+
+
+```{r}
+tot_prices <- ice_cream|>
+  mutate(
+    price_paid = priceper1 - couponper1
+  )|>
+  group_by(
+    household_income, region
+  )|>
+  summarize(
+    mean_price_paid = mean(price_paid), .groups = "drop"
+  )
+```
+
+
+```{r}
+ggplot(data = tot_prices,
+       mapping = aes(
+        x = household_income,
+        y = mean_price_paid,
+        fill = household_income
+       ))+
+  geom_col()+
+    facet_wrap(~region)
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+The price paid for Ben and Jerry's ice cream is similar among households. There are minimal differences among regions in the United States. 
