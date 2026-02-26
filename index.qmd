@@ -18,11 +18,11 @@ about:
       href: https://ssdanl.github.io/
     - icon: file-earmark-pdf
       text: Resumé
-      href: Sophia Stang Resume 2024.pdf
+      href: Sophia_Stang_Resume_2026.pdf
       target: _blank
     - icon: mailbox
       text: Email
-      href: mailto:sjs102@geneseo.edu
+      href: mailto:sjstang30@gmail.com
 
 ---
 
